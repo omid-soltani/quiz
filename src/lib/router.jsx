@@ -1,5 +1,6 @@
 import { createBrowserRouter, redirect } from "react-router"
 import Home from "../components/home"
+import Quiz from "../components/Quiz"
 import MainLayout from "../layout/MainLayout"
 
 const MyRouter = createBrowserRouter([
@@ -17,7 +18,7 @@ const MyRouter = createBrowserRouter([
       },
       {
         path: "quiz",
-        element: <div className="mt-20">quiz</div>
+        element: <Quiz />
 
       },
       {

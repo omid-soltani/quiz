@@ -149,3 +149,11 @@
   --text-headline-md--line-height: 32px;
   --text-headline-md--font-weight: 700;
 }
+@layer components {
+  .button-primary {
+    @apply px-space-xl py-space-sm rounded-xl bg-linear-to-l from-primary-container via-primary-container to-secondary-container text-on-primary-container  text-label-lg font-bold flex items-center gap-space-sm shadow-[0_4px_24px_rgba(160,120,255,0.5)] hover:shadow-[0_6px_30px_rgba(160,120,255,0.7)] transition-all transform hover:-translate-y-0.5 active:scale-95;
+  }
+  .button-scend-primary {
+    @apply px-space-md py-space-sm rounded-xl bg-surface-container-high hover:bg-surface-bright text-on-surface  text-label-lg flex items-center gap-space-xs transition-all shadow-md active:scale-95;
+  }
+}
