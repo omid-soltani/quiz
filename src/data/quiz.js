@@ -73,7 +73,7 @@ export const questions = [
       "کدام Hook برای مدیریت State در کامپوننت‌های React استفاده می‌شود؟",
     answers: ["useEffect", "useState", "useRef", "useMemo"],
     correctAnswer: 1,
-    difficulty: "easy",
+    difficulty: "آسان",
     score: 5,
   },
   {
@@ -82,7 +82,7 @@ export const questions = [
       "کدام متد برای پیمایش آرایه و تولید یک آرایه جدید استفاده می‌شود؟",
     answers: ["forEach()", "filter()", "map()", "find()"],
     correctAnswer: 2,
-    difficulty: "easy",
+    difficulty: "آسان",
     score: 5,
   },
   {
@@ -90,7 +90,7 @@ export const questions = [
     question: "کدام ویژگی در React برای شناسایی آیتم‌های لیست استفاده می‌شود؟",
     answers: ["id", "index", "key", "ref"],
     correctAnswer: 2,
-    difficulty: "easy",
+    difficulty: "آسان",
     score: 5,
   },
   {
@@ -99,7 +99,7 @@ export const questions = [
       "کدام Hook برای اجرای عملیات جانبی مانند دریافت اطلاعات از API استفاده می‌شود؟",
     answers: ["useState", "useEffect", "useMemo", "useContext"],
     correctAnswer: 1,
-    difficulty: "medium",
+    difficulty: "متوسط",
     score: 10,
   },
   {
@@ -108,7 +108,7 @@ export const questions = [
       "کدام عبارت برای مقایسه مقدار و نوع داده به‌صورت هم‌زمان استفاده می‌شود؟",
     answers: ["==", "=", "===", "!="],
     correctAnswer: 2,
-    difficulty: "easy",
+    difficulty: "آسان",
     score: 5,
   },
   {
@@ -117,7 +117,7 @@ export const questions = [
       "کدام روش برای انتقال اطلاعات از کامپوننت والد به فرزند استفاده می‌شود؟",
     answers: ["State", "Props", "Ref", "Effect"],
     correctAnswer: 1,
-    difficulty: "easy",
+    difficulty: "آسان",
     score: 5,
   },
   {
@@ -125,7 +125,7 @@ export const questions = [
     question: "خروجی عبارت typeof null در JavaScript چیست؟",
     answers: ["null", "undefined", "object", "boolean"],
     correctAnswer: 2,
-    difficulty: "medium",
+    difficulty: "متوسط",
     score: 10,
   },
   {
@@ -134,7 +134,7 @@ export const questions = [
       "کدام Hook برای نگهداری مقدار بین رندرها، بدون ایجاد رندر مجدد هنگام تغییر آن، مناسب است؟",
     answers: ["useState", "useEffect", "useRef", "useMemo"],
     correctAnswer: 2,
-    difficulty: "medium",
+    difficulty: "متوسط",
     score: 10,
   },
   {
@@ -143,7 +143,7 @@ export const questions = [
       "کدام مفهوم باعث می‌شود تغییرات State در رابط کاربری React نمایش داده شوند؟",
     answers: ["Re-render", "DOM Mutation", "Event Bubbling", "Hoisting"],
     correctAnswer: 0,
-    difficulty: "medium",
+    difficulty: "متوسط",
     score: 10,
   },
   {
@@ -157,7 +157,7 @@ export const questions = [
       "JSON.toObject()",
     ],
     correctAnswer: 1,
-    difficulty: "easy",
+    difficulty: "آسان",
     score: 5,
   },
 ];

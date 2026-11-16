@@ -1,10 +1,11 @@
-
+import useQuiz from "../../../../../context/useQuiz";
 
 function QuizTitle() {
+  const { currentQuestion } = useQuiz()
   return (
     <div className="relative z-10">
       <p className="font-headline-md text-headline-md text-on-surface font-extrabold leading-relaxed md:leading-loose">
-        در معماری میکروسرویس‌ها، کدام الگو برای مدیریت تراکنش‌های توزیع‌شده بین چندین سرویس مستقل بدون استفاده از قفل دو فاز (2PC) به کار می‌رود؟
+        {currentQuestion.question}
       </p>
     </div>
   )

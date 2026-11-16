@@ -1,4 +1,4 @@
-import useQuizLogic from "../lib/hooks/useLogicQuiz";
+import useQuizLogic from "../lib/hooks/useLogicQuiz.js";
 import QuizContext from "./QuizContext";
 
 function QuizProvider({ children }) {
