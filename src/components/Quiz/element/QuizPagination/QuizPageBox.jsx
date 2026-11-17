@@ -1,9 +1,25 @@
+import clsx from "clsx";
+import useQuiz from "../../../../context/useQuiz";
+function QuizPageBox({ quiz, index }) {
 
-function QuizPageBox() {
+  const { currentQuestion, isQuestionAnswered, changeQuestion } = useQuiz()
+  const isNowQuestion = currentQuestion.id === quiz.id
+
+  const questType = isQuestionAnswered(quiz)
+
   return (
-    <button className="relative py-space-sm rounded-xl bg-surface-container-high/90 hover:bg-surface-bright text-on-surface font-label-lg text-label-lg flex flex-col items-center justify-center transition-all shadow-md group" type="button">
-      <span>۲</span>
-      <span className="w-1.5 h-1.5 rounded-full bg-tertiary shadow-[0_0_8px_rgba(78,222,163,0.9)] mt-0.5"></span>
+    <button onClick={() => {
+      changeQuestion(index)
+    }} className={clsx(
+      "btn-page-quest-notActive",
+      {
+        "btn-page-quest-active": questType,
+        "quest-pag-now-btn": isNowQuestion,
+      }
+    )}
+      type="button" >
+      <span>{quiz.id}</span>
+      <span className={`${isNowQuestion && "animate-pulse"} ${questType && !isNowQuestion ? "bg-tertiary shadow-[0_0_8px_rgba(78,222,163,0.9)]" : "bg-surface-variant"} w-1.5 h-1.5 rounded-full   mt-0.5`}></span>
     </button>
   )
 }

@@ -1,19 +1,13 @@
 import { IoTrendingUp } from "react-icons/io5";
 import useQuiz from "../../../context/useQuiz";
 import { quizConfig } from "../../../data/quiz";
+import { answeredQuestionsHandel } from "../../../lib/funcs/quiz";
+
 
 function QuizProcesses() {
   const { answers } = useQuiz()
-  const answeredQuestionsHandel = (answers) => {
-    let answeredQuestions = 0
-    answers.forEach(answer => {
-      if (answer.selectedAnswer !== null) {
-        answeredQuestions++
-      }
-    }
-    );
-    return answeredQuestions
-  }
+
+
   const answeredQuestions = answeredQuestionsHandel(answers)
   return (
     <div className="w-full bg-surface-container-low/70 backdrop-blur-xl rounded-xl p-space-md shadow-lg flex flex-col gap-space-xs">

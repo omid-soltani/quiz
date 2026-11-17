@@ -24,6 +24,15 @@ const useLogicQuiz = () => {
 
     return answer?.selectedAnswer === answerIndex;
   };
+
+  const isQuestionAnswered = (question) => {
+    const questionType = answers.find(
+      (answer) => answer.questionId === question.id,
+    );
+
+    return questionType.selectedAnswer !== null;
+  };
+
   const selectAnswer = (answerIndex) => {
     setAnswers((prevAnswers) =>
       prevAnswers.map((question) =>
@@ -35,6 +44,7 @@ const useLogicQuiz = () => {
   };
 
   return {
+    isQuestionAnswered,
     questionIndex,
     setQuestionIndex,
     answers,
