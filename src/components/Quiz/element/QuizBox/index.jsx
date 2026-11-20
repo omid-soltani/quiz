@@ -40,7 +40,6 @@ function QuizBox() {
 
       <div className="grid grid-cols-1 gap-space-md relative z-10" id="options-group">
         {currentQuestion.answers.map((a, i) => <QuizAnswer key={i} index={i} answer={a} onclick={() => {
-
           selectAnswer(i)
         }} />)}
 

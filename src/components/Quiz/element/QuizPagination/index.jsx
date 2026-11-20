@@ -22,6 +22,7 @@ function QuizPagination() {
         {questions.map((q, i) => <QuizPageBox key={i} quiz={q} index={i} />)}
       </div>
 
+      {/* add components types of question in future ... */}
       <div className="flex items-center justify-center flex-wrap gap-space-lg pt-space-xs font-label-sm text-label-sm text-on-surface-variant">
         <div className="flex items-center gap-space-xs">
           <span className="w-2.5 h-2.5 rounded-full bg-primary-container shadow-[0_0_8px_rgba(160,120,255,0.8)]"></span>

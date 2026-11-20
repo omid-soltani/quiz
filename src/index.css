@@ -33,6 +33,19 @@
   --font-vazir-medium: "Vazir-Medium", sans-serif;
   --font-vazir-bold: "Vazir-Bold", sans-serif;
 
+  --font-body-sm: var(--font-vazir-regular);
+  --font-headline-sm: var(--font-vazir-medium);
+  --font-body-md: var(--font-vazir-regular);
+  --font-headline-lg-mobile: var(--font-vazir-bold);
+  --font-label-sm: var(--font-vazir-medium);
+  --font-label-md: var(--font-vazir-medium);
+  --font-body-lg: var(--font-vazir-regular);
+  --font-headline-lg: var(--font-vazir-bold);
+  --font-headline-xl-mobile: var(--font-vazir-bold);
+  --font-headline-xl: var(--font-vazir-bold);
+  --font-label-lg: var(--font-vazir-medium);
+  --font-headline-md: var(--font-vazir-bold);
+
   /* Colors */
   --color-on-primary-container: #340080;
   --color-surface-container-lowest: #0a0e18;

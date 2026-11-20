@@ -19,7 +19,7 @@ function QuizPageBox({ quiz, index }) {
     )}
       type="button" >
       <span>{quiz.id}</span>
-      <span className={`${isNowQuestion && "animate-pulse"} ${questType && !isNowQuestion ? "bg-tertiary shadow-[0_0_8px_rgba(78,222,163,0.9)]" : "bg-surface-variant"} w-1.5 h-1.5 rounded-full   mt-0.5`}></span>
+      <span className={`${isNowQuestion && "animate-pulse bg-primary-container"} ${questType && !isNowQuestion ? "bg-tertiary shadow-[0_0_8px_rgba(78,222,163,0.9)]" : "bg-surface-variant"} w-1.5 h-1.5 rounded-full   mt-0.5`}></span>
     </button>
   )
 }

@@ -1,17 +1,21 @@
-import { Outlet } from "react-router"
+import { Outlet, useMatches } from "react-router"
 import QuizProvider from "../context/QuizProvider"
 import Footer from "./Footer"
 import Header from "./Header"
 import Main from "./Main"
 
 function MainLayout() {
+  const matches = useMatches()
+  const isHide = matches.some(match => match.handle?.hide)
+
   return (
     <QuizProvider>
-      <Header />
+      {!isHide && <Header />}
       <Main>
         <Outlet />
       </Main>
-      <Footer />
+      {!isHide && <Footer />}
+
     </QuizProvider>
 
 
