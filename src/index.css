@@ -169,17 +169,26 @@
   .button-scend-primary {
     @apply px-space-md py-space-sm rounded-xl bg-surface-container-high hover:bg-surface-bright text-on-surface  text-label-lg flex items-center gap-space-xs transition-all shadow-md active:scale-95;
   }
-  @layer components {
-    .btn-page-quest-active {
-      @apply relative py-space-sm rounded-xl bg-surface-container-high/90 hover:bg-surface-bright text-on-surface text-label-lg flex flex-col items-center justify-center transition-all shadow-md;
-    }
 
-    .btn-page-quest-notActive {
-      @apply py-space-sm rounded-xl bg-surface-container-lowest/60 hover:bg-surface-container-high text-on-surface-variant text-label-lg flex flex-col items-center justify-center transition-all;
-    }
+  .btn-page-quest-active {
+    @apply relative py-space-sm rounded-xl bg-surface-container-high/90 hover:bg-surface-bright text-on-surface text-label-lg flex flex-col items-center justify-center transition-all shadow-md;
+  }
 
-    .quest-pag-now-btn {
-      @apply relative py-space-sm rounded-xl bg-primary-container text-on-primary-container text-label-lg font-bold flex flex-col items-center justify-center shadow-[0_0_20px_rgba(160,120,255,0.7)] scale-105 hover:bg-inverse-primary;
-    }
+  .btn-page-quest-notActive {
+    @apply py-space-sm rounded-xl bg-surface-container-lowest/60 hover:bg-surface-container-high text-on-surface-variant text-label-lg flex flex-col items-center justify-center transition-all;
+  }
+
+  .quest-pag-now-btn {
+    @apply relative py-space-sm rounded-xl bg-primary-container text-on-primary-container text-label-lg font-bold flex flex-col items-center justify-center shadow-[0_0_20px_rgba(160,120,255,0.7)] scale-105 hover:bg-inverse-primary;
+  }
+
+  .review-question-box-notAnswer {
+    @apply bg-surface-container-highest text-on-surface-variant hover:bg-surface-bright;
+  }
+  .review-question-box-correctAnswer {
+    @apply bg-tertiary/15 text-tertiary hover:bg-tertiary/25;
+  }
+  .review-question-box-unCorrectAnswer {
+    @apply bg-error/20 text-error hover:bg-error/30;
   }
 }

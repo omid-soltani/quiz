@@ -1,7 +1,9 @@
 import { IoIosPerson } from "react-icons/io";
+import { Link } from "react-router";
+import { quizConfig } from "../../data/quiz";
 import HeaderBackEffect from "./HeaderBackEffect";
 
-function Footer() {
+function Header() {
   return (
     <>
       <HeaderBackEffect />
@@ -12,20 +14,21 @@ function Footer() {
             <div className="flex items-center gap-space-sm">
               <span
                 className="font-vazir-medium text-headline-md text-primary tracking-wide">کوییزنوا</span><span
-                  className="hidden sm:inline-flex items-center px-space-sm py-space-xs rounded-full bg-surface-container-high/80 text-on-surface-variant font-label-sm text-label-sm">آزمون
-                تخصصی هوش و دانش</span>
+                  className="hidden sm:inline-flex items-center px-space-sm py-space-xs rounded-full bg-surface-container-high/80 text-on-surface-variant font-label-sm text-[12px]">
+                {quizConfig.title}</span>
             </div>
           </div>
           <div className="hidden md:flex items-center justify-center">
             <div
               className="flex items-center gap-space-sm px-space-md py-space-xs rounded-full bg-surface-container-low/80 backdrop-blur-md shadow-[0_2px_12px_rgba(0,0,0,0.2)]">
               <span className="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span
-                className="font-vazir-regular text-label-md text-on-surface">آزمون فعال • ۱۰ سؤال</span>
+                className="font-vazir-regular text-label-md text-on-surface">آزمون فعال • {quizConfig.totalQuestions.toLocaleString("fa-ir")} سؤال</span>
             </div>
           </div>
-          <nav className="hidden lg:flex items-center gap-space-sm bg-primary-container text-on-primary-container font-vazir-bold rounded-xl"><a aria-current="page"
-            className="px-space-md py-space-sm transition-colors bg-primary-container text-on-primary-container font-vazir-bold rounded-xl"
-            data-path="quiz-experience" href="#">شروع آزمون</a>
+          <nav className="hidden lg:flex items-center gap-space-sm bg-primary-container text-on-primary-container font-vazir-bold rounded-xl">
+            <Link to={"/quiz"} aria-current="page"
+              className="px-space-md py-space-sm transition-colors bg-primary-container text-on-primary-container font-vazir-bold rounded-xl"
+              data-path="quiz-experience" href="#">شروع آزمون</Link>
             {/* <a
               className="px-space-md py-space-sm rounded-xl font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
               data-path="leaderboard" href="#">جدول برترین‌ها</a>
@@ -60,8 +63,12 @@ function Footer() {
         </div>
       </header>
     </>
+
+
+
+
   );
 }
 
 
-export default Footer
+export default Header

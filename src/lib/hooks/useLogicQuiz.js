@@ -33,6 +33,14 @@ const useLogicQuiz = () => {
     return questionType.selectedAnswer !== null;
   };
 
+  const isQuestionCorrectAnswered = (question) => {
+    const questionType = answers.find(
+      (answer) => answer.questionId === question.id,
+    );
+
+    return questionType.selectedAnswer === question.correctAnswer;
+  };
+
   const selectAnswer = (answerIndex) => {
     setAnswers((prevAnswers) =>
       prevAnswers.map((question) =>
@@ -43,8 +51,14 @@ const useLogicQuiz = () => {
     );
   };
 
+  const resetAnswers = () => {
+    answers.map((answer) => (answer.selectedAnswer = null));
+  };
+
   return {
+    resetAnswers,
     isQuestionAnswered,
+    isQuestionCorrectAnswered,
     questionIndex,
     setQuestionIndex,
     answers,
